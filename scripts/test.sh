@@ -1,3 +1,3 @@
 #!/usr/bin/sh
 
-[ -z "`git status --porcelain`" ] && echo "NULL-NO DIFFS" || echo "DIFFS EXIST"
+[ -z "`git status --porcelain`" ] && echo "Pas de differences" || echo "Differences"
