@@ -1,3 +1,3 @@
 # romain_package
 
-Project made in Ubuntu 20.04/ ROS Noetic
+Projet fait sur Ubuntu 20.04/ ROS Noetic
