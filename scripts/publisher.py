@@ -4,11 +4,6 @@ import rospy
 #import git
 from std_msgs.msg import String
 
-# def git_push_change(path):
-#    repo = git.Repo(path)
-#    current = repo.head.commit
-#    repo.remotes.origin.push()
-
 def talker():
     pub = rospy.Publisher('chatter', String, queue_size=10)
     rospy.init_node('talker', anonymous=True)
