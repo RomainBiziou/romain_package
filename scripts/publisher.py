@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 # license removed for brevity
 import rospy
-#import git
 from std_msgs.msg import String
 
 def talker():
