@@ -1,3 +1,8 @@
 #!/usr/bin/sh
 
-[ -z "`git status --porcelain`" ] && echo "Pas de differences" || echo "Differences"
+if ! git --git-dir="~/.git" diff --quiet
+then
+    echo "change"
+fi
+
+#[ -z "`git status --porcelain`" ] && echo "Pas de differences" || echo "Differences"
