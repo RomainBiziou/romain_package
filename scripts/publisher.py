@@ -1,15 +1,17 @@
 #!/usr/bin/env python3
 # license removed for brevity
+from sys import stdout
 import rospy
 from std_msgs.msg import String
+import subprocess
 
 def talker():
     pub = rospy.Publisher('chatter', String, queue_size=10)
     rospy.init_node('talker', anonymous=True)
-    rate = rospy.Rate(1)
+    rate = rospy.Rate(0.1)
     while not rospy.is_shutdown():
-        strg_msg = "test"
-        pub.publish(strg_msg)
+        p1 = subprocess.check_output(['git remote show origin'], shell=True).decode('utf-8')
+        pub.publish(p1)
         rate.sleep()
 
 if __name__ == '__main__':
