@@ -8,6 +8,7 @@ import subprocess
 def talker():
     pub = rospy.Publisher('chatter', String, queue_size=10)
     rospy.init_node('talker', anonymous=True)
+    # speed of message e.g 1 is 1 message per second
     rate = rospy.Rate(0.1)
     while not rospy.is_shutdown():
         p1 = subprocess.check_output(['git remote show origin'], shell=True).decode('utf-8')
